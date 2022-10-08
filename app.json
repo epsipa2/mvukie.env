@@ -1,0 +1,145 @@
+{
+    "name": "MVU_Music_Bot",
+    "description": "Logi Is A Telegram Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://telegra.ph/file/2ce59959822b85aa5f468.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Logi",
+    "telegram-music-bot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "10670890",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "b8c18624a9a4b397e9989c30904de9d2",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "If you want your assistant to leave all chats automatically after some time.",
+        "value": "True",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "A Bot's token from Botfather",
+        "value": "5691474077:AAEdJawtC9u8M-b0dWIlTHqSM2HKWdXDIaA",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "Get a mongodb url from https://cloud.mongodb.com . ",
+        "value": "mongodb+srv://beula39:beula39@cluster0.jksfzkj.mongodb.net/?retryWrites=true&w=majority",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "A name for your Music Bot. ",
+        "value": "MVU_MUSIC_BOT⁪⁬",
+        "required": true
+      },
+      "OWNER_USERNAME": {
+       "description": "the bot owner user name",
+       "value": " mvukie39",
+       "required":true
+      },
+      "SUPPORT_CHANNEL": {
+        "description": "the bot owner user name",
+        "value": "https://t.me/logi_channel",
+        "required":true
+       },
+       "SUPPORT_GROUP": {
+        "description": "the bot owner user name",
+        "value": "https://t.me/Eps_12",
+        "required":true
+       },             
+      "OWNER_ID": {
+        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "value": "1970096110",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION2": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
+        "required": false
+      },
+      "STRING_SESSION3": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
+        "required": false
+      },
+      "STRING_SESSION4": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
+        "required": false
+      },        
+      "STRING_SESSION5": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "BAA0-pGzct9JODlPrXazcRfS5V-BjfCGzDw69ALugRb4MfmYmAtIY3pLKRwu61_G5-_1lkoc3Ee5DwXrJToyNKMCkdGdwNYNMKZMH7AfGf4aakXCRQ9F9sXV-8T7zBt6I_BlOuQjqnIYf3SFx4Ch6ktYLAskGhLUR-LBFFox_7VVib-Gali0r5mZZrtoiV9FDb9y6E6bc3MqsZjZceMWCQzJEzCELVhFgCXmuB-anUOdsaOfoUhHnEhJ_jOMw4F_RgcxB9fV-AYHkpBSO9QfOP-qWXd1roUlebtHeaBs_joBkJvYRQif8QbCjzD3JBUN0Xe8cf-uYqe2BBhq-X2AgAZWdW1H7gA",
+        "required": false
+      },                
+      "PING_IMG_URL": {
+        "description": "The pic which will be shown when you give the /ping cmd to the bot.",
+        "value": "https://telegra.ph/file/2ce59959822b85aa5f468.png",
+        "required": false
+      },
+      "START_IMG_URL": {
+        "description": "The pic which will be shown when you /start the bot in private.",
+        "value": "https://telegra.ph/file/2ce59959822b85aa5f468.jpg",
+        "required": false
+      },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku account's API key",
+        "value": "fe516070-0270-48af-96a4-d2fbc01832bf",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Your heroku app/bot's name",
+        "value": "https://dashboard.heroku.com/account",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "value":"-1001768257900",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "If you dont know this, Leave as it is",
+        "value": "https://github.com/LOGI-LAB/LogiMusic",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "Upstream Repo's Branch Name",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      },
+      "stack": "container"
+  }
